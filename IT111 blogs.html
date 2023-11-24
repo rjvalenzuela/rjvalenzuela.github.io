@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> IT111 blogs </title>
+        <style>
+            body {
+                background-image: url(blogbg.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            header {
+                padding: 30px;
+                position: inherit;
+                border-color: black;
+                box-shadow: 0 0 50;
+                
+            }
+            h1 {
+                font-family:'Times New Roman', Times, serif;
+                font-size: 60px;
+                text-shadow: blanchedalmond;
+                box-shadow: 0 0 10;
+                color: rgb(148, 255, 144);
+                margin-top: 10px;
+                margin-left: 200px;
+            }
+            h2 {
+                font-size: 60px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(255, 255, 255);
+                margin-top: -340px;
+                position: inherit;
+                text-align: center;
+                text-shadow: #000000;
+            }
+            .bn5 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #006b42;
+            background: -webkit-linear-gradient(85deg, #006b42 0%, #bdbcbc 100%);
+            background: linear-gradient(85deg, #006b42 0%, #bdbcbc#b8b7b7 100%);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 50px;
+            }
+
+            .bn5:before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowingbn5 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 20px;
+            }
+
+            @keyframes glowingbn5 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+            }
+            .glitch-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba(33, 33, 33, 0.01);
+            }
+
+            .glitch {
+            position: relative;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #fff;
+            letter-spacing: 4px;
+            z-index: 1;
+            }
+
+            .glitch:before,
+            .glitch:after {
+            display: block;
+            content: attr(data-glitch);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            margin-left: 151px;
+            }
+
+            .glitch:before {
+            animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            color: #0ff;
+            z-index: -1;
+            }
+
+            .glitch:after {
+            animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+            color: #ff00ff;
+            z-index: -2;
+            }
+
+            @keyframes glitch-color {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-3px, 3px);
+            }
+
+            40% {
+                transform: translate(-3px, -3px);
+            }
+
+            60% {
+                transform: translate(3px, 3px);
+            }
+
+            80% {
+                transform: translate(3px, -3px);
+            }
+
+            to {
+                transform: translate(0);
+            }
+            }
+            .image:hover {
+            transform: scale(1.0);
+            box-shadow: 0 0 10px 5px rgb(113, 231, 196);
+            transition-duration: 0.5s;
+            }
+            .bn5:active {
+            color: rgb(0, 0, 0);
+            }
+
+            .bn5:active:after {
+            background: transparent;
+            }
+
+            .bn5:hover:before {
+            opacity: 1;
+            }
+
+            .bn5:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #00000000;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+                }            
+            .bn3637 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 2rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(3, 42, 216), 255, 255;
+            backface-visibility: hidden;
+            border: 0.3rem solid transparent;
+            border-radius: 3rem;
+            position: relative;
+            }
+            .bn36 {
+            border-color: #fff;
+            transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+            display: inline-block;
+            margin: 0 auto;
+            color: rgb(184, 245, 245);
+            position: relative;
+            text-align: center;
+            }
+            .bn36:hover {
+            transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+            transition-duration: 0.5s;
+            box-shadow: 0 0 15px 5px rgb(113, 231, 196);
+            }
+            footer {
+            padding: 10px;
+            background-color: #000000be;
+            text-align: center;
+            color: aliceblue;
+            font-size: 40px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            h3 {
+            font-size: 20px;
+            }
+        </style>
+        <body>
+            <header>
+                <h1 style="text-shadow: rgb(0, 0, 0) 0 0 5px;"> RJV </h1>
+                <div class="button" style="margin-top: -80px;"> </div>
+                <a type="button" href="Index.html" style="border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: center; position: relative; top :30%; left: 55%; margin-bottom: -50px; padding: 20px; box-shadow: 0 0 8px #464646;" class="bn5"> HOME </a>
+                <a type="button" href="IT111 blogs.html" style="border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: center; position: relative; top :30%; left: 60%; margin-bottom: -50px; padding: 20px; box-shadow: 0 0 8px #464646;" class="bn5"> IT111 blogs </a>
+                <a type="button" href="FLEX PAGE.html" style="border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: center; position: relative; top :30%; left: 65%; margin-bottom: -50px; padding: 20px; box-shadow: 0 0 8px #464646;" class="bn5"> FLEX </a>
+            </div>
+            </header>
+            <hr>
+            <div style="font-size: 100px; width: 300px; height: 400px;" class="image"></div>
+            <h2 class="glitch" data-glitch="MY OUTPUT AND LEARNIGS" style="font-size: 60px; text-align: center; margin-right: 30px; margin-top: -350px; text-shadow: rgb(0, 85, 81) 0 0 5px;"> MY OUTPUT AND LEARNIGS </h2>
+            <hr>
+            <div style="font-size: 60px; color: white; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; text-shadow: black 0 0 5px;"> LESSONS:</div>
+            <img src="IT1st.png" alt="Image description" height="350px" width="550px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="IT2nd.PNG" alt="Image description" height="350px" width="550px" style="border-radius: 25%; margin-left: 50px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="IT3rd.PNG" alt="Image description" height="350px" width="550px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="IT4th.PNG" alt="Image description" height="350px" width="550px" style="border-radius: 25%; margin-left: 50px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="IT5th.PNG" alt="Image description" height="350px" width="550px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="IT6th.PNG" alt="Image description" height="350px" width="550px" style="border-radius: 25%; margin-left: 50px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <hr>
+            <div style="font-size: 60px; color: white; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center; text-shadow: black 0 0 5px;"> MY WORKS:</div>
+            <img src="vlsi.PNG" alt="Image description" height="350px" width="560px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="cybercrime.PNG" alt="Image description" height="350px" width="560px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="assignment.PNG" alt="Image description" height="350px" width="560px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <img src="instructions.PNG" alt="Image description" height="350px" width="560px" style="border-radius: 25%; margin-left: 80px; margin-bottom: 80px; box-shadow: lightgreen 0 0 20px;">
+            <hr>
+            <script src="effects.js"></script>
+            <footer>
+                <p style="text-align: center; font-family: 'Times New Roman', Times, serif;">@rjvalenzuela [2023]</p>
+                <div>
+                <h3> Powered by Visual Studio Code develop by Ronald James Valenzuela </h3>
+                </div> 
+            </footer>
+        </body>
+    </head>
+</html>

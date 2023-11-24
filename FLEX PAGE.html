@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> FLEX PAGE </title>
+        <style>
+            body {
+                background-image: url(flexbg.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat:repeat;
+                position: inherit;
+            }
+            header {
+                padding: 20px;
+                position: inherit;
+                border-color: black;
+                box-shadow: 0 0 50;
+            }
+            h1 {
+                font-family:'Times New Roman', Times, serif;
+                font-size: 60px;
+                text-shadow: blanchedalmond;
+                box-shadow: 0 0 10;
+                color: rgb(148, 255, 144);
+                margin-top: 10px;
+                margin-left: 200px;
+            }
+            h2 {
+                font-size: 80px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(255, 255, 255);
+                margin-top: -340px;
+                position: inherit;
+                text-align: center;
+                text-shadow: #000000;
+                padding: 5px;
+                top: -20px;
+            }
+            .image {
+            background-size: 20px;
+            margin-bottom: 0px;
+            bottom: -40px;
+            position: relative;
+            left: 40px;
+            }
+            .image:hover {
+            transform: scale(1.0);
+            box-shadow: 0 0 10px 5px rgb(113, 231, 196);
+            transition-duration: 0.5s;
+            }
+            .button {
+            margin-left: 50px;
+            justify-content: space-between;
+            margin-top: -50px;
+            }
+            .bn5 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #006b42;
+            background: -webkit-linear-gradient(98deg, #006b42 0%, #bdbcbc 100%);
+            background: linear-gradient(98deg, #006b42 0%, #bdbcbc 100%);
+            cursor: pointer;
+            position: inherit;
+            z-index: 0;
+            border-radius: 50px;
+            }
+            .bn5:before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowingbn5 20s linear infinite;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 20px;
+            }
+
+            @keyframes glowingbn5 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+            }
+            .glitch-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: rgba(33, 33, 33, 0.01);
+            }
+
+            .glitch {
+            position: relative;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #fff;
+            letter-spacing: 4px;
+            z-index: 1;
+            }
+
+            .glitch:before,
+            .glitch:after {
+            display: block;
+            content: attr(data-glitch);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            margin-left: 370px;
+            margin-top: 5px;
+            }
+
+            .glitch:before {
+            animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            color: #0ff;
+            z-index: -1;
+            }
+
+            .glitch:after {
+            animation: glitch-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+            color: #ff00ff;
+            z-index: -2;
+            }
+
+            @keyframes glitch-color {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-3px, 3px);
+            }
+
+            40% {
+                transform: translate(-3px, -3px);
+            }
+
+            60% {
+                transform: translate(3px, 3px);
+            }
+
+            80% {
+                transform: translate(3px, -3px);
+            }
+
+            to {
+                transform: translate(0);
+            }
+            }
+            .bn5:active {
+            color: rgb(0, 0, 0);
+            }
+
+            .bn5:active:after {
+            background: transparent;
+            }
+
+            .bn5:hover:before {
+            opacity: 1;
+            }
+
+            .bn5:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #00000000;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            }
+            .bn3637 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.7rem 2rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(3, 42, 216), 255, 255;
+            backface-visibility: hidden;
+            border: 0.3rem solid transparent;
+            border-radius: 3rem;
+            position: relative;
+            }
+            .bn36 {
+            border-color: #fff;
+            transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+            display: inline-block;
+            margin: 0 auto;
+            color: rgb(184, 245, 245);
+            position: relative;
+            text-align: center;
+            }
+            .bn36:hover {
+            transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+            transition-duration: 0.5s;
+            box-shadow: 0 0 15px 5px rgb(113, 231, 196);
+            }
+            footer {
+            padding: 10px;
+            text-align: center;
+            background-color: #000000be;
+            color: aliceblue;
+            font-size: 40px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            h3 {
+            font-size: 20px;
+            }
+        </style>
+        <body>
+            <header>
+                <h1 style="text-shadow: rgb(0, 0, 0) 0 0 5px;"> RJV </h1>
+                <div class="button" style="margin-top: -80px;"></div>
+                <a type="button" href="Index.html" style="border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: center; position: relative; top :30%; left: 55%; margin-bottom: -50px; padding: 20px; box-shadow: 0 0 8px #464646;" class="bn5"> HOME </a>
+                <a type="button" href="IT111 blogs.html" style="border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: center; position: relative; top :30%; left: 60%; margin-bottom: -50px; padding: 20px; box-shadow: 0 0 8px #464646;" class="bn5"> IT111 blogs </a>
+                <a type="button" href="FLEX PAGE.html" style="border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); justify-content: center; position: relative; top :30%; left: 65%; margin-bottom: -50px; padding: 20px; box-shadow: 0 0 8px #464646;" class="bn5"> FLEX </a>
+            </div>
+            </header>
+            <hr>
+            <hr>
+            <div style="font-size: 100px; width: 300px; height: 400px;" class="image"></div>
+            <h2 class="glitch" data-glitch="My FLEX Things" style="font-size: 60px; text-align: center; margin-right: 30px; margin-top: -330px; text-shadow: rgb(0, 85, 81) 0 0 5px;"> My FLEX Things </h2>
+            <hr>
+            <img src="sunset.jpg" alt="Image description" height="600px" width="400px" style="border-radius: 25%; margin-left: 160px; box-shadow: white 0 0 20px;">
+            <img src="dagat.jpg" alt="Image description" height="400px" width="600px" style="border-radius: 25%; margin-right: 50px; margin-bottom: 40px; box-shadow: white 0 0 20px;">
+            <div style="font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #fff; text-align: center; text-shadow: black 0 0 5px;"> This is me during the sunrise because I love the way when sun rises and sun sets down </div>
+            <hr>
+            <div style="padding: 30px;"> </div>
+            <hr>
+            <img src="fam.JPG" alt="Image description" height="400px" width="600px" style="border-radius: 25%; margin-left: 65px; box-shadow: white 0 0 20px;">
+            <img src="fam2.jpg" alt="Image description" height="400px" width="600px" style="border-radius: 25%; margin-right: -160px; box-shadow: white 0 0 20px;">
+            <div style="font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #fff; text-align: center; text-shadow: black 0 0 5px;"> This is my family. The first photo taken during our family freind reunion last July.
+                                                                                                                                                        The second photo taken during our graduation Baccalaureatte program </div>
+            <hr>
+            <div style="padding: 30px;"> </div>
+            <hr>
+            <img src="langg.jpeg" alt="Image description" height="550px" width="400px" style="border-radius: 25%; margin-left: 50px; box-shadow: white 0 0 20px;">
+            <img src="lab.jpg" alt="Image description" height="550px" width="400px" style="border-radius: 25%; margin-left: 20px; box-shadow: white 0 0 20px;">
+            <img src="langga.jpeg" alt="Image description" height="550px" width="400px" style="border-radius: 25%; margin-left: 900px; margin-top: -553px; float: left; box-shadow: white 0 0 20px;">
+            <div style="font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #fff; text-align: center; text-shadow: black 0 0 5px;">  This is my girlfriend and we've been together for 3 months, but we're almost 8 months since I start to court her. </div>
+            <hr>
+            <div style="padding: 30px;"> </div>
+            <hr>
+            <img src="photography.jpg" alt="Image description" height="600px" width="450px" style="border-radius: 5%; margin-left: 150px; box-shadow: white 0 0 20px;">
+            <img src="RJV logo.png" alt="Image description" height="600px" width="600px" style="box-shadow: white 0 0 20px; border-radius: 20px;">
+            <div style="font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #fff; text-align: center; text-shadow: black 0 0 5px;">  I am a part time photography freelancer and this is one of my shots during the COT Acquaintance Party. I love photography because this is one of my passion even I only started in this year, and I also have my own page named RJV LITRATO </div>
+            <hr>
+            <div style="padding: 30px;"> </div>
+            <hr>
+            <img src="squad.jpg" alt="Image description" height="450px" width="700px" style="border-radius: 25%; margin-left: 310px; margin-bottom: 40px; box-shadow: white 0 0 20px;">
+            <div style="font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #fff; text-align: center; text-shadow: black 0 0 5px; margin-top: -30px;">  This is my classmates and we help each other, we collaborate other activities specially in developing thhis Webpage </div>
+            <script src="effects.js"></script>
+            <hr>
+            <hr>
+            <footer>
+                <p style="text-align: center; font-family: 'Times New Roman', Times, serif;">@rjvalenzuela [2023]</p>
+                <div>
+                <h3> Powered by Visual Studio Code develop by Ronald James Valenzuela </h3>
+                </div> 
+            </footer>
+        </body>
+    </head>
+</html>
